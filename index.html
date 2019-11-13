@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GISTNU DEMO TurfJS hexgrid with LeafletJS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GISTNU DEMO TurfJS hexgrid with LeafletJS">
+    <meta name="keywords" content="GISTNU DEMO TurfJS hexgrid with LeafletJS">
+    <meta name="author" content="Teerayoot injun teerayoot5056@gmail.com by GISTNU">
+    <link rel="icon" type="image/x-icon"
+        href="https://yt3.ggpht.com/a-/ACSszfEeQbGYAQ3_WzjiCd_vUcH2NKHSlV1xx13vKQ=s900-mo-c-c0xffffffff-rj-k-no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: #777777
+        }
+
+        .row.content {
+            height: 700px
+        }
+
+        .sidenav {
+            background-color: #333333;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        .col-0 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <img src="http://www3.cgistln.nu.ac.th/training/img/logo.png" alt="" width="100%">
+                <div class="card mb-3">
+                    <h3 class="card-header">GISTNU DEMO</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">Leaflet + TurfJS</h5>
+                        <h6 class="card-subtitle text-muted">Advanced geospatial analysis for browsers</h6>
+                    </div>
+                    <a href="https://turfjs.org/"><img style="height: 200px; width: 100%; display: block;"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZEa6rcGUvk8LPpqffFNxcArpN2EP_VHNoWECQZO49HlI3bSPy"
+                            alt="Card image"></a>
+
+                    <div class="card-body">
+                        <p class="card-text">Leaflet is the leading open-source JavaScript library for mobile-friendly
+                            interactive maps. </p>
+                    </div>
+                </div>
+
+                <div id="custom-map-controls" class="legend "></div>
+
+            </div>
+
+            <div class="col-sm-9 col-0 ">
+                <div id="mapid" style="width: 100%; height: 700px;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
